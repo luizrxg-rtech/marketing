@@ -29,7 +29,7 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="faq" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,7 +56,7 @@ export const FAQ = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm  rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}

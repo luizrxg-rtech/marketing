@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { LanguageProvider } from '@/hooks/useLanguage';
 
 export const metadata: Metadata = {
-  title: 'Boomer - Performance em Vendas',
+  title: 'RTech - Performance em Vendas',
   description: 'Somos a solução de performance em vendas para sua marca. Transformando marcas através de estratégias digitais baseadas em dados.',
 };
 

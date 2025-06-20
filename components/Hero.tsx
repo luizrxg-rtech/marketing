@@ -8,7 +8,7 @@ export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-orange-900/20" />
       <div className="absolute inset-0">
@@ -16,32 +16,34 @@ export const Hero = () => {
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 text-left relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           {/* Main Title */}
-          <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+          <motion.div
+            className="flex flex-col text-4xl md:text-6xl lg:text-7xl font-normal mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {t('hero.title')} <br />
-            {t('hero.subtitle')} <br />
-            <span className="text-gradient">{t('hero.highlight')}</span> <br />
-            {t('hero.description')}
-          </motion.h1>
+            <h1> {t('hero.title')} </h1>
+            <h1> {t('hero.subtitle')} </h1>
+            <span className="text-gradient leading-tight w-fit mt-2">{t('hero.highlight')}</span>
+            <h1>
+              {t('hero.description')}
+            </h1>
+          </motion.div>
 
           {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12"
+            className="flex flex-col sm:flex-row items-start justify-start gap-4 mt-12"
           >
             <Button 
               size="lg" 
@@ -49,15 +51,6 @@ export const Hero = () => {
             >
               {t('hero.cta')}
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white/20 text-white hover:bg-white/10 text-lg px-8 py-6 rounded-full group"
-            >
-              <Play className="mr-2 group-hover:scale-110 transition-transform" size={20} />
-              Watch Demo
             </Button>
           </motion.div>
         </motion.div>

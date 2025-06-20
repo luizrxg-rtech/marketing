@@ -19,29 +19,23 @@ export const Footer = () => {
             className="mb-8 md:mb-0"
           >
             <div className="text-2xl font-bold text-gradient mb-4">
-              Boomer
+              {t('globals.appName')}
             </div>
             <p className="text-white/70 max-w-md">
               {t('footer.description')}
             </p>
           </motion.div>
 
-          {/* Powered By */}
+          {/* Copywright */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-center md:text-right"
+            className="text-center mt-auto md:text-right"
           >
-            <div className="flex items-center justify-center md:justify-end mb-2">
-              <Zap className="text-blue-400 mr-2" size={20} />
-              <span className="text-white font-semibold">
-                {t('footer.poweredBy')}
-              </span>
-            </div>
             <p className="text-white/60 text-sm">
-              © 2024 Boomer. {t('footer.rights')}
+              © 2025 {t('globals.appName')}. {t('footer.rights')}
             </p>
           </motion.div>
         </div>

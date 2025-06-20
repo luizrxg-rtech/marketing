@@ -27,30 +27,31 @@ export const Header = () => {
   }, []);
 
   const navItems = [
-    { key: 'nav.about', href: '#about' },
-    { key: 'nav.services', href: '#services' },
+    { key: 'nav.home', href: '#home' },
+    { key: 'nav.companies', href: '#companies' },
     { key: 'nav.cases', href: '#cases' },
-    { key: 'nav.contact', href: '#contact' }
+    { key: 'nav.method', href: '#method' },
+    { key: 'nav.faq', href: '#faq' }
   ];
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`max-w-[1024px] box-content mx-auto px-6 py-3 fixed top-3 left-0 right-0 rounded-2xl z-50 transition-all duration-500 ${
         isScrolled
-          ? 'glass-effect rounded-2xl mx-4 mt-4 py-3'
-          : 'bg-transparent py-6'
+          ? 'backdrop-blur-xl bg-white/5'
+          : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <motion.div
           className="text-2xl font-bold text-gradient"
           whileHover={{ scale: 1.05 }}
         >
-          Boomer
+          {t('globals.appName')}
         </motion.div>
 
         {/* Desktop Navigation */}
@@ -79,10 +80,10 @@ export const Header = () => {
             </SelectTrigger>
             <SelectContent className="bg-black/90 border-white/20 backdrop-blur-sm">
               <SelectItem value="pt" className="text-white hover:bg-white/10 focus:bg-white/10">
-                🇧🇷 PT
+                PT
               </SelectItem>
               <SelectItem value="en" className="text-white hover:bg-white/10 focus:bg-white/10">
-                🇺🇸 EN
+                EN
               </SelectItem>
             </SelectContent>
           </Select>
@@ -131,10 +132,10 @@ export const Header = () => {
                 </SelectTrigger>
                 <SelectContent className="bg-black/90 border-white/20 backdrop-blur-sm">
                   <SelectItem value="pt" className="text-white hover:bg-white/10 focus:bg-white/10">
-                    🇧🇷 PT
+                    PT
                   </SelectItem>
                   <SelectItem value="en" className="text-white hover:bg-white/10 focus:bg-white/10">
-                    🇺🇸 EN
+                    EN
                   </SelectItem>
                 </SelectContent>
               </Select>

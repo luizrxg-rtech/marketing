@@ -8,7 +8,7 @@ export const Mission = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="misson" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -47,7 +47,7 @@ export const Mission = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-blue-900/20 to-purple-900/20 ">
               {/* Video Placeholder */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.button

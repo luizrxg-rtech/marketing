@@ -32,7 +32,7 @@ export const Method = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="method" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,7 +42,7 @@ export const Method = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Método <span className="text-gradient">Boomer</span>
+            {t('method.title.first')} <span className="text-gradient">{t('method.title.second')}</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
             {t('method.description')}
@@ -51,9 +51,6 @@ export const Method = () => {
 
         {/* Method Steps */}
         <div className="relative">
-          {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-          
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
               <motion.div
@@ -106,7 +103,7 @@ export const Method = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.2 + 0.8 }}
                     viewport={{ once: true }}
-                    className="hidden lg:block absolute top-10 -right-6 text-white/30"
+                    className="hidden lg:block absolute top-20 -right-6 text-white/30"
                   >
                     <ArrowRight size={24} />
                   </motion.div>

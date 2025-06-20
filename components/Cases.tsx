@@ -12,7 +12,7 @@ export const Cases = () => {
   const getCases = () => {
     const casesData = t('cases.items');
     if (typeof casesData === 'string') return [];
-    
+
     return [
       {
         ...casesData[0],
@@ -101,7 +101,7 @@ export const Cases = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
+                className="group relative bg-white/5 backdrop-blur-sm  rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
               >
                 {/* Image */}
                 <div className="aspect-video relative overflow-hidden">
@@ -121,11 +121,11 @@ export const Cases = () => {
                     </span>
                     <ArrowRight className="text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" size={16} />
                   </div>
-                  
+
                   <h3 className="text-xl font-bold mb-3 text-white">
                     {caseItem.title}
                   </h3>
-                  
+
                   <p className="text-white/70 text-sm mb-4 leading-relaxed">
                     {caseItem.description}
                   </p>
@@ -141,7 +141,7 @@ export const Cases = () => {
                       </div>
                       <div className="text-xs text-white/60">{t('cases.metrics.growth')}</div>
                     </div>
-                    
+
                     <div className="text-center">
                       <div className="flex items-center justify-center mb-1">
                         <Users className="text-blue-400" size={16} />
@@ -151,7 +151,7 @@ export const Cases = () => {
                       </div>
                       <div className="text-xs text-white/60">{t('cases.metrics.users')}</div>
                     </div>
-                    
+
                     <div className="text-center">
                       <div className="flex items-center justify-center mb-1">
                         <Star className="text-yellow-400" size={16} />
@@ -170,14 +170,14 @@ export const Cases = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm border border-white/10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm "
           >
             <ChevronLeft className="text-white" size={24} />
           </button>
-          
+
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm border border-white/10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm "
           >
             <ChevronRight className="text-white" size={24} />
           </button>

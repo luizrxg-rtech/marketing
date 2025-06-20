@@ -45,7 +45,7 @@ export const Companies = () => {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="companies" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -76,7 +76,7 @@ export const Companies = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center justify-center p-6 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
+                className="flex items-center justify-center p-6 rounded-xl bg-white/5  hover:border-white/20 transition-all duration-300"
               >
                 <span className="text-white/80 font-semibold text-lg">
                   {company.logo}
@@ -88,14 +88,14 @@ export const Companies = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm border border-white/10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm "
           >
             <ChevronLeft className="text-white" size={20} />
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm border border-white/10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm "
           >
             <ChevronRight className="text-white" size={20} />
           </button>
