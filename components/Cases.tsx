@@ -13,35 +13,46 @@ export const Cases = () => {
     const casesData = t('cases.items');
     if (typeof casesData === 'string') return [];
 
-    // @ts-ignore
     return [
       {
-        ...casesData[0],
+        title: t('cases.items.0.title'),
+        company: t('cases.items.0.company'),
+        description: t('cases.items.0.description'),
         image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
         metrics: { growth: '+300%', users: '50K+', rating: '4.9' }
       },
       {
-        ...casesData[1],
+        title: t('cases.items.1.title'),
+        company: t('cases.items.1.company'),
+        description: t('cases.items.1.description'),
         image: 'https://images.pexels.com/photos/1040173/pexels-photo-1040173.jpeg?auto=compress&cs=tinysrgb&w=600',
         metrics: { growth: '+250%', users: '30K+', rating: '4.8' }
       },
       {
-        ...casesData[2],
+        title: t('cases.items.2.title'),
+        company: t('cases.items.2.company'),
+        description: t('cases.items.2.description'),
         image: 'https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600',
         metrics: { growth: '+400%', users: '100K+', rating: '4.9' }
       },
       {
-        ...casesData[3],
+        title: t('cases.items.3.title'),
+        company: t('cases.items.3.company'),
+        description: t('cases.items.3.description'),
         image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600',
         metrics: { growth: '+200%', users: '75K+', rating: '4.7' }
       },
       {
-        ...casesData[4],
+        title: t('cases.items.4.title'),
+        company: t('cases.items.4.company'),
+        description: t('cases.items.4.description'),
         image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
         metrics: { growth: '+500%', users: '200K+', rating: '4.9' }
       },
       {
-        ...casesData[5],
+        title: t('cases.items.5.title'),
+        company: t('cases.items.5.company'),
+        description: t('cases.items.5.description'),
         image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600',
         metrics: { growth: '+350%', users: '80K+', rating: '4.8' }
       }
