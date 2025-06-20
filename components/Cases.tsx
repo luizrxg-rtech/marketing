@@ -13,6 +13,7 @@ export const Cases = () => {
     const casesData = t('cases.items');
     if (typeof casesData === 'string') return [];
 
+    // @ts-ignore
     return [
       {
         ...casesData[0],
