@@ -25,6 +25,11 @@ export const strings = {
     hero: {
       title: "Somos a solução de",
       subtitle: "performance em",
+      words: [
+        "Marketing Digital",
+        "Vendas",
+        "Inteligência de dados"
+      ],
       highlight: "Vendas",
       description: "para sua marca",
       cta: "Fale Conosco"
@@ -159,6 +164,11 @@ export const strings = {
     hero: {
       title: "We are the solution for",
       subtitle: "performance in",
+      words: [
+        "Digital Marketing",
+        "Sales",
+        "Data Intelligence",
+      ],
       highlight: "Sales",
       description: "for your brand",
       cta: "Contact Us"

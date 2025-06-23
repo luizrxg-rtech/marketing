@@ -3,8 +3,15 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
+import {useEffect, useState} from "react";
 
 export const Hero = () => {
+  const [word, currentWord] = useState("hero.words.0");
+
+  useEffect(() => {
+
+  }, []);
+
   const { t } = useLanguage();
 
   return (
@@ -25,14 +32,17 @@ export const Hero = () => {
         >
           {/* Main Title */}
           <motion.div
-            className="flex flex-col text-4xl md:text-6xl lg:text-7xl font-normal mb-6 leading-tight"
+            className="flex flex-col text-4xl md:text-6xl lg:text-7xl font-normal mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1> {t('hero.title')} </h1>
-            <h1> {t('hero.subtitle')} </h1>
-            <span className="text-gradient leading-tight w-fit mt-2">{t('hero.highlight')}</span>
+            <h1 className="leading-tight">
+              {t('hero.title')}
+              <br />
+              {t('hero.subtitle')}
+            </h1>
+            <h1 className="text-gradient leading-tight w-fit mt-2">{t('hero.highlight')}</h1>
             <h1>
               {t('hero.description')}
             </h1>

@@ -36,9 +36,9 @@ export const Header = () => {
 
   return (
     <motion.header
-      className={`max-w-[1024px] box-content mx-auto px-6 py-3 fixed top-3 left-0 right-0 rounded-2xl z-50 transition-all duration-500 ${
+      className={`max-w-5xl box-content mx-auto px-6 py-3 fixed top-3 left-0 right-0 rounded-2xl z-50 transition-all duration-500 ${
         isScrolled
-          ? 'backdrop-blur-xl bg-white/5'
+          ? 'backdrop-blur-xl bg-background/10 max-w-4xl'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
